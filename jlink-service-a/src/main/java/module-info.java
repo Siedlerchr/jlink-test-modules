@@ -5,7 +5,7 @@ module org.jdk.sample.jlink.test.service.a {
 
     requires org.jdk.sample.jlink.test.service;
 
-    exports org.jdk.sample.jlink.test.service.a to org.jdk.sample.jlink.test.app;
+    requires transitive java.desktop;
 
     provides ServiceInterface
             with AInterface;
