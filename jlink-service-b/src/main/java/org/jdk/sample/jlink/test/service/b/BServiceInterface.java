@@ -1,4 +1,4 @@
-package org.jdk.sample.jlink.test.service.numbers;
+package org.jdk.sample.jlink.test.service.b;
 
 import org.jdk.sample.jlink.test.service.ServiceInterface;
 
