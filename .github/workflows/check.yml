@@ -1,0 +1,14 @@
+name: Check
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: 19
+    - run: ./gradlew assemble
+    - run: ./run.sh
