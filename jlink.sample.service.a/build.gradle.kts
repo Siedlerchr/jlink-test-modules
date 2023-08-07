@@ -7,10 +7,7 @@ plugins {
 }
 
 dependencies {
-    api(project(":jlink-app"))
     api(project(":jlink.sample.service.base"))
-    api(project(":jlink.sample.service.b"))
-    api(project(":jlink.sample.service.a"))
 }
 
-description = "jlink-sample-modules-maven :: jigsaw-jlink"
+description = "jlink-sample-modules-maven :: jlink.sample.service.a"

@@ -1,20 +1,17 @@
 jlink --module-path ^
 %JAVA_HOME%\jmods;^
-jlink-service-base\build\libs\jlink-service-base-0.0.1-SNAPSHOT.jar;^
-jlink-app\build\libs\jlink-app-0.0.1-SNAPSHOT.jar;^
-jlink-service-a\build\libs\jlink-service-a-0.0.1-SNAPSHOT.jar;^
-jlink-service-b\build\libs\jlink-service-b-0.0.1-SNAPSHOT.jar ^
+out;^
 --add-modules ^
-org.jdk.sample.jlink.test.app,^
-org.jdk.sample.jlink.test.service,^
-org.jdk.sample.jlink.test.service.b,^
-org.jdk.sample.jlink.test.service.a ^
+jlink.sample.app,^
+jlink.sample.service,^
+jlink.sample.service.b,^
+jlink.sample.service.a ^
 --no-header-files ^
 --no-man-pages ^
 --strip-debug ^
 --compress=2 ^
---launcher command=org.jdk.sample.jlink.test.app/org.jdk.sample.jlink.test.MainApplication ^
+--launcher command=jlink.sample.sampleapp/jlink.sample.sampleapp.MainApplication ^
 --output target
 
-REM build\libs\bin\java -m org.jdk.sample.jlink.testapp/org.jdk.sample.jlink.testjlink
+REM build\libs\bin\java -m jlink.sampleapp/jlink.samplejlink
 
